@@ -1,0 +1,262 @@
+* {
+    
+    box-sizing: border-box;
+    font-family: "Poiret One", sans-serif;
+}
+
+body {
+    background-color: white;
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.header {
+    min-height: 100vh;                 /* ocupa toda la pantalla */
+    width: 100%;                       /* llega a los lados */
+    margin: 0;
+    padding: 0;
+
+    background-image: url("img/fondo.jpg");
+    background-size: cover;            /* llena toda la sección */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* MENU */
+.menu {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    z-index: 1000;
+}
+
+/* LOGO PEQUEÑO DEL MENÚ (ARRIBA) */
+.logo img {
+    height: 100px;      /* ⬅️ cambia este número para agrandar/achicar */
+    width: auto;
+    margin-top: -5px;  /* ⬅️ súbelo o bájalo */
+}
+
+/* LOGO GRANDE DEL CENTRO */
+.logo-centro {
+    position: relative;
+    top: -100px; /* ⬅️ ESTO LO SUBE DE VERDAD */
+    display: flex;
+    justify-content: center;
+}
+
+.logo-centro img {
+    width: 500px;
+    max-width: 80%;
+    height: auto;
+}
+
+
+
+/* NAVBAR */
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
+/* HEADER INFO */
+.header-info {
+    margin-top: -60px; /* ⬅️ sube el texto junto al logo */
+    text-align: center;
+}
+
+
+.header-info h1 {
+    color: black;
+}
+
+.header-info p {
+    color: black;
+}
+
+
+/* BOTONES */
+.btn-1, .btn-2 {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: blueviolet;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-1:hover, .btn-2:hover {
+    background-color: #7a2cbf;
+    color: white;
+}
+
+/* PRODUCTOS */
+.productos {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.productos h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* INFO */
+.info {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.info ul {
+    margin-bottom: 30px;
+}
+
+/* FOOTER / CONTACTO */
+.footer {
+    background-color: #e6e6e6;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+
+.contacto-form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: black;
+}
+
+/* RESPONSIVE - CELULAR */
+@media (max-width: 768px) {
+
+    .menu {
+        padding: 15px 25px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: blueviolet;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+    }
+
+    .navbar ul li a {
+        display: block;
+        color: black;
+        font-size: 18px;
+    }
+
+    /* CUANDO SE ABRE */
+    .navbar.active {
+        display: block;
+    }
+}
+
+.redes-sociales {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes-sociales a {
+    background-color: blueviolet;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redes-sociales a:hover {
+    background-color: #7a2cbf;
+    color: white;
+}
